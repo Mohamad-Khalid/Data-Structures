@@ -10,7 +10,7 @@ class stack{
 	// node contain value and a pointer of node type
 	struct node
 	{
-		int value;
+		t value;
 		node *next;
 	};
 
@@ -83,7 +83,8 @@ public:
 };
 
 // function to test the stack
-void testStack(stack<int>s){
+template<class t>
+void testStack(stack<t>s){
 	// push,pop,size,empty,display
 	int choice = 1;
 	while(choice){
@@ -93,9 +94,9 @@ void testStack(stack<int>s){
 
 
 		if(choice == 1){
-			int value;
+			t value;
 			printf("Enter the value\n");
-			scanf("%d",&value);
+			cin>>value;
 			s.push(value);
 		}
 
@@ -129,7 +130,7 @@ void testStack(stack<int>s){
 
 int main(){
 
-	stack <int> st;
+	stack <char> st;
 	testStack(st);
 	
 	return 0;
